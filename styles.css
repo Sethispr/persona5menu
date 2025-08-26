@@ -1,0 +1,25 @@
+  top: 26.5%;
+  transform: translate(-50%, -50%);
+  transition: transform 50ms;
+  width: 20%;
+  z-index: 10;
+}
+
+.red {
+  fill: #ff0022;
+}
+
+.blue {
+  fill: #1cfeff;
+  mix-blend-mode: screen; /* 🎩🐰 Where all the magic happens! Only needed on the top layer (blue) */
+}
+
+.menu {
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+}
