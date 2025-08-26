@@ -1,33 +1,48 @@
-// Settings
+body {
+  background-color: black;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/40288/p5-bg.jpg');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
 
-const svgWidth = 100; // must match viewBox in HTML
-const svgHeight = 50;
-const animationSpeed = 120; // speed in ms
+.container {
+  position: relative;
+}
 
-// 0 = go to edge
-// higher = points stay further from edge
-// max: width/2 or height/2
-const horizontalEdgePadding = 0;
-const verticalEdgePadding = 0;
+.joker {
+  background: none;
+  height: auto;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
 
-// higher = points stay further from center
-// 0 = points may touch
-// max: width/2 or height/2
-const horizontalCenterPadding = 20;
-const verticalCenterPadding = 5;
+.selector {
+  height: 8%;
+  left: 50%;
+  position: absolute;
+  top: 26.5%;
+  transform: translate(-50%, -50%);
+  transition: transform 50ms;
+  width: 20%;
+  z-index: 10;
+}
 
-const menuPositions = [
-  { left: '50%', top: '26.5%', width: '15%', height: '8%' },
-  { left: '51%', top: '32.4%', width: '15%', height: '8%' },
-  { left: '46%', top: '38%', width: '24%', height: '8%' },
-  { left: '43%', top: '43.3%', width: '20%', height: '8%' },
-  { left: '45.5%', top: '50%', width: '20%', height: '8%' },
-  { left: '39%', top: '55.2%', width: '32%', height: '7%' },
-  { left: '40%', top: '61%', width: '20%', height: '8%' },
-  { left: '42.5%', top: '66.6%', width: '20%', height: '8%' },
-  { left: '41.25%', top: '72%', width: '20%', height: '8%' },
-];
+.red {
+  fill: #ff0022;
+}
 
-// Animation
+.blue {
+  fill: #1cfeff;
+  mix-blend-mode: screen; /* 🎩🐰 Where all the magic happens! Only needed on the top layer (blue) */
+}
 
-let currentMenuItem = 0;
+.menu {
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+}
